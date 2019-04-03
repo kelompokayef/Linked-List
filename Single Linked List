@@ -97,3 +97,47 @@ void InsertPos(int letak, int nilai){
 
     cout<<"\n\n Data "<<nilai<<" dimasukkan ke dalam list\n ";
 }
+int main (){
+    cout<<"LINKED LIST\n\n";
+    cout<<"==================\n\n";
+    cout<<"1. Insert Node Depan\n";
+    cout<<"2. Insert Node Belakang\n";
+    cout<<"3. Hapus Node Depan\n";
+    cout<<"4. Hapus Node Belakang\n";
+    cout<<"5. Insert Node Sesuai letak\n";
+    cout<<"6. Hapus Node Program Tertentu\n\n";
+    menu:
+    int pil;
+    int nilai, letak;
+    cout<<"Insert Pilihan = ";cin>>pil;
+    switch (pil){
+        case 1 : cout<<"Insert data = ";
+                 cin>>nilai;
+                 InsFront(nilai);
+                 Display();
+                 goto menu;
+        case 2 : cout<<"Insert data = ";
+                 cin>>nilai;
+                 InsBack(nilai);
+                 Display();
+                 goto menu;
+        case 3 : DelFront();
+                 cout<<"\n Selesai di hapus.\n";
+                 Display();
+                 goto menu;
+        case 4 : DelBack();
+                 cout<<"\n Selesai di hapus.\n";
+                 Display();
+                 goto menu;
+        case 5 : cout<<"Masukkan Letak ke Berapa = ";cin>>letak;
+                 cout<<"Masukkan Nilai = ";cin>>nilai;
+                 InsertPos(letak,nilai);
+                 Display();
+                 goto menu;
+      case 6 : cout<<"\n\n SELESAI \n";
+                 exit(0);
+        default : cout<<"Kode yang Anda Masukkan Salah!!\n\n";
+                 goto menu;
+    }
+    return 0;
+}
