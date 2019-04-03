@@ -1,0 +1,30 @@
+#include <iostream>
+#include <windows.h> // #include <windows.h> ini buat pake windows
+using namespace std;
+
+struct node{
+    int data;
+    node *next;
+};
+node *head, *tail;
+
+int isEmpty() {
+	if (head == NULL)
+	return 1;
+	else return 0;
+}
+
+void InsFront(int nilai){
+    node *baru;
+    baru = new node;
+    baru->data=nilai;
+    baru->next=NULL;
+    if(isEmpty()==1){
+        head = baru;
+        head->next=NULL;
+    }else{
+        baru->next=head;
+        head=baru;
+    }
+    cout<<"\n Data "<<nilai<<" dimasukkan ke dalam list\n ";
+}
