@@ -28,3 +28,42 @@ void InsFront(int nilai){
     }
     cout<<"\n Data "<<nilai<<" dimasukkan ke dalam list\n ";
 }
+void InsBack(int nilai){
+    node *baru, *bantu;
+    baru=new node;
+    baru->data=nilai;
+    baru->next=NULL;
+    if(isEmpty()==1){
+        head=baru;
+        head->next=NULL;
+    }else{
+        bantu=head;
+        while(bantu->next!=NULL){
+            bantu=bantu->next;
+        }
+        bantu->next=baru;
+    }
+    cout<<"\n Data "<<nilai<<" dimasukkan ke dalam list\n ";
+}
+
+void Display(){
+    node *baru=new node;
+    baru=head;
+    if (isEmpty()==0){
+        cout<<"\n Data yang ada dalam list ";
+    while(baru!=NULL){
+        cout<<baru->data<<" ";
+        baru=baru->next;
+        }
+    }
+    cout<<endl<<endl;
+}
+
+void DelFront()
+  {
+  	
+    node *baru=new node;
+    baru=head;
+    head=head->next;
+    delete baru;
+  }
