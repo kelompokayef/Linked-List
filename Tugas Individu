@@ -143,11 +143,7 @@ int main(){
 
 int nama_menu(){
 	cout<<"\t\t  https://github.com/BrondoL/Stack_LIFO"<<endl;
-	cout<<"\t||=====================================================||"<<endl;
-	cout<<"\t||                                                     ||"<<endl;
-	cout<<"\t||  DEVELOPED BY BrondoL aka Amara Indah Pancarani     ||"<<endl;
-	cout<<"\t||                                                     ||"<<endl;
-	cout<<"\t||=====================================================||"<<endl<<endl;
+	cout<<"\t||  DEVELOPED BY BrondoL aka Amara Indah Pancarani     ||"<<endl<<endl;
 	cout<<"\t\t     STACK WITH LINKED LIST CONCEPT"<<endl<<endl;
 	int menu;
 	cout << "MENU : "<<endl<<endl;
